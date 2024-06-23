@@ -17,7 +17,7 @@ class CreateRestsTable extends Migration
             $table->id();
             $table->foreignId('work_id')->constrained()->cascadeOnDelete();
             $table->time('break_start');
-            $table->time('break_end');
+            $table->time('break_end')->nullable();
             $table->timestamp('created_at')->useCurrent()->nullable();
             $table->timestamp('updated_at')->useCurrent()->nullable();
         });
