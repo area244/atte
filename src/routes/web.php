@@ -18,6 +18,13 @@ use App\Http\Controllers\AuthenticatedSessionController;
     return view('welcome');
 });*/
 
+Route::get('/admin', [AuthenticatedSessionController::class, 'sotre']);
+Route::post('/admin', [AuthenticatedSessionController::class, 'destroy']);
+/*Route::get('/register', [AuthenticatedSessionController::class, 'create']);
+Route::post('/register', [AuthenticatedSessionController::class, 'store']);*/
+
+Route::post('/attendance', [AuthenticatedSessionController::class, 'attendance']);
+
 Route::middleware('auth')->group(function () {
     Route::get('/', [AuthenticatedSessionController::class, 'index']);
 });

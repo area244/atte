@@ -11,5 +11,9 @@ class Work extends Model
 
     protected $guarded = [
         'id',
+        'name',
+        'work_date',
+        'work_start',
+        'work_end'
     ];
 }

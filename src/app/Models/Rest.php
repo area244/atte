@@ -11,5 +11,9 @@ class Rest extends Model
     
     protected $guarded = [
         'id',
+        'name',
+        'work_id',
+        'break_start',
+        'break_end'
     ];
 }

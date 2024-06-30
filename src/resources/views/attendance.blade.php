@@ -11,22 +11,25 @@
 
 <div class="attendance__content">
   <div class="attendance-table">
-    <table class="attendance-table__inner">
-      <tr class="attendance-table__row">
-        <th class="attendance-table__header">名前</th>
-        <th class="attendance-table__header">勤務開始</th>
-        <th class="attendance-table__header">勤務終了</th>
-        <th class="attendance-table__header">休憩開始</th>
-        <th class="attendance-table__header">勤務時間</th>
-      </tr>
-      <tr class="attendance-table__row">
-        <td class="attendance-table__item">○○</td>
-        <td class="attendance-table__item">○○</td>
-        <td class="attendance-table__item">○○</td>
-        <td class="attendance-table__item">○○</td>
-        <td class="attendance-table__item">○○</td>
-      </tr>
-    </table>
+    <form class="form" action="/attendance" method="post">
+    @csrf
+      <table class="attendance-table__inner">
+        <tr class="attendance-table__row">
+          <th class="attendance-table__header">名前</th>
+          <th class="attendance-table__header">勤務開始</th>
+          <th class="attendance-table__header">勤務終了</th>
+          <th class="attendance-table__header">休憩開始</th>
+          <th class="attendance-table__header">勤務時間</th>
+        </tr>
+        <tr class="attendance-table__row">
+          <td class="attendance-table__item">○○</td>
+          <td class="attendance-table__item">○○</td>
+          <td class="attendance-table__item">○○</td>
+          <td class="attendance-table__item">○○</td>
+          <td class="attendance-table__item">○○</td>
+        </tr>
+      </table>
+    </form>
   </div>
 </div>
 @endsection
