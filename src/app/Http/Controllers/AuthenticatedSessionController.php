@@ -11,17 +11,6 @@ class AuthenticatedSessionController extends Controller
     public function index()
     {
         return view('index');
-        /*$authors = Work::all();
-        return view('index', ['works' => $works]);*/
-        /*$authors = Rest::all();
-        return view('index', ['rests' => $rests]);*/
-    }
-    
-    // 日付別勤怠ページ
-    public function attendance(ContactRequest $request)
-    {
-        $contact = $request->only(['work_id','work_date', 'work_start', 'work_end']);
-        return view('attendance', compact('contact'));
     }
     
     // ログインページ：GET
