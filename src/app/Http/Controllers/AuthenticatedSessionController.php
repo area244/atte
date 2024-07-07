@@ -13,16 +13,9 @@ class AuthenticatedSessionController extends Controller
         return view('index');
     }
     
-    // ログインページ：GET
-    public function sotre(ContactRequest $request)
+    // 日付別勤怠ページ
+    public function attendance()
     {
-        $contact = $request->only(['work_date', 'work_start', 'work_end']);
-        Work::create($contact);
-    }
-
-    // ログインページ：POST
-    public function destroy(ContactRequest $request)
-    {
-        return view('login');
+        return view('attendance');
     }
 }
