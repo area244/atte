@@ -22,11 +22,11 @@
           <th class="attendance-table__header">勤務時間</th>
         </tr>
         <tr class="attendance-table__row">
-          <td class="attendance-table__item">○○</td>
-          <td class="attendance-table__item">○○</td>
-          <td class="attendance-table__item">○○</td>
-          <td class="attendance-table__item">○○</td>
-          <td class="attendance-table__item">○○</td>
+          <td class="attendance-table__item">{{$name->getDetail()}}</td>
+          <td class="attendance-table__item">{{$work_start->getDetail()}}</td>
+          <td class="attendance-table__item">{{$work_end->getDetail()}}</td>
+          <td class="attendance-table__item">{{$break_start->getDetail()}}</td>
+          <td class="attendance-table__item">{{$break_end->getDetail()}}</td>
         </tr>
       </table>
     </form>
