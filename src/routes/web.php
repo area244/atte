@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthenticatedSessionController;
+use App\Http\Controllers\RestController;
 use App\Http\Controllers\AttendanceController;
 
 /*
@@ -20,6 +21,6 @@ Route::middleware('auth')->group(function () {
     Route::post('/attendance', [AttendanceController::class, 'attendance']);
     Route::post('/attendance/workStart', [AttendanceController::class, 'workStart']);
     Route::post('/attendance/workEnd', [AttendanceController::class, 'workEnd']);
-    Route::post('/attendance/breakStart', [AttendanceController::class, 'breakStart']);
-    Route::post('/attendance/breakEnd', [AttendanceController::class, 'breakEnd']);
+    Route::post('/attendance/breakStart', [RestController::class, 'breakStart']);
+    Route::post('/attendance/breakEnd', [RestController::class, 'breakEnd']);
 });
